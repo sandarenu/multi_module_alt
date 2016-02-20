@@ -1,0 +1,24 @@
+{
+  "name": "react_commons",
+  "version": "0.0.1",
+  "description": "Common React Components",
+  "main": "lib/index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "compile": "babel -d lib/ src/",
+    "prepublish": "npm run compile"
+  },
+  "keywords": [
+    "React"
+  ],
+  "author": "Sandarenu",
+  "dependencies": {
+    "babel": "^5.8.29",
+    "babel-core": "^5.8.21",
+    "babel-eslint": "^5.0.0-beta4",
+    "superagent":"1.7.2"
+  },
+  "private": false
+}
