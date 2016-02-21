@@ -14,9 +14,24 @@ export default class I18NStore {
             }
         };
 
-        this.bindListeners({
-            setLanguage: I18NAction.SET_LANGUAGE
+        this.on('init', () => {
+            console.log("init called....")
         });
+
+        this.on('error', (err, payload, currentState) => {
+            if (payload.action === MyActions.fire) {
+                logError(err, payload.data);
+            }
+        });
+
+        this.exportPublicMethods({
+            setLanguage: this.setLanguage
+        });
+
+        console.log("I18NStore init finished")
+        //this.bindListeners({
+        //    setLanguage: I18NAction.SET_LANGUAGE
+        //});
     }
 
     setLanguage(lang) {

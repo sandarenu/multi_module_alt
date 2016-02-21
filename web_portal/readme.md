@@ -2,7 +2,7 @@
 
 ## Developer Guide
 
-* Refer `react_commons/readme.md` readme file, install and build that npm module.
+* Refer [readme file](../react_commons/readme.md) in `react_commons` module, install and build that npm module.
 * Install dependencies
 `npm install`
 * Start dev server

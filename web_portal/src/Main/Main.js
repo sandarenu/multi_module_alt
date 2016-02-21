@@ -6,6 +6,8 @@ var Stores = require('../Stores')
 var MyUserStore = Stores.MyUserStore
 var MyI18NStore = Stores.MyI18NStore
 
+import WebI18NStore from './../WebI18NStore'
+
 
 
 require('bootstrap/dist/css/bootstrap.min.css');
@@ -22,15 +24,8 @@ class Main extends Component {
         return (
             <AltContainer
                 stores={{
-                    user: MyUserStore
-                  }}
-                inject={{
-                    i18n: function (props) {
-                      return MyI18NStore.getState().value
-                    },
-                    selectedLanguage: function(props){
-                        return MyI18NStore.getState().selectedLanguage
-                    }
+                    user: MyUserStore,
+                    webI18n: WebI18NStore
                   }}>
 
                 {this.props.children}
